@@ -5,6 +5,7 @@ export default async function getVideos(searchValue) {
   );
   if (response.ok) {
     const json = await response.json();
+    console.log(json);
     return json;
   }
   console.log(`Ошибка HTTP: ${response.status}`);

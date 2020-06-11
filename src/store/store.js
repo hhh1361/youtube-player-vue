@@ -9,7 +9,7 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    list: '...',
+    list: [],
     currentVideo: '',
   },
 
@@ -19,11 +19,17 @@ export default new Vuex.Store({
     setList(state, value) {
       state.list = value;
     },
+    chooseVideo(state, value) {
+      state.currentVideo = value;
+    },
   },
 
   actions: {
     setList(context, value) {
       context.commit('setList', value);
+    },
+    chooseVideo(context, value) {
+      context.commit('chooseVideo', value);
     },
   },
 });

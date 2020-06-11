@@ -35,7 +35,7 @@ export default {
     async applyDataFromApi(e) {
       this.searchText = e.target.value;
       const videos = await getVideos(e.target.value);
-      this.$store.dispatch('setList', videos);
+      this.$store.dispatch('setList', videos.items);
     },
   },
 };
