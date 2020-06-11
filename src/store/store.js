@@ -1,22 +1,29 @@
 import Vuex from 'vuex';
 import Vue from 'vue';
 
+Vue.config.productionTip = false;
+Vue.config.devtools = true;
+
 Vue.use(Vuex);
 
 
 export default new Vuex.Store({
   state: {
-    list: [],
+    list: '...',
     currentVideo: '',
   },
 
   getters: {},
 
   mutations: {
-    setList(state, array) {
-      state.list = array;
+    setList(state, value) {
+      state.list = value;
     },
   },
 
-  actions: {},
+  actions: {
+    setList(context, value) {
+      context.commit('setList', value);
+    },
+  },
 });

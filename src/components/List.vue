@@ -1,11 +1,17 @@
 <template>
-  <div class="list" />
+  <div class="list">
+    {{ something }}
+  </div>
 </template>
 
 <script>
 export default {
   name: 'List',
-  computed: {},
+  computed: {
+    something() {
+      return this.$store.state.list;
+    },
+  },
   methods: {},
 };
 </script>
