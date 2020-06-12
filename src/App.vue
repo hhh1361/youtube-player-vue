@@ -1,15 +1,13 @@
 <template>
   <div id="app">
-    <b-container>
-      <b-row>
-        <b-col cols="8">
-          <Player />
-        </b-col>
-        <b-col>
-          <Search />
-          <List />
-        </b-col>
-      </b-row>
+    <b-container class="app-container">
+      <div class="player-section">
+        <Player />
+      </div>
+      <div class="search-section">
+        <Search />
+        <List />
+      </div>
     </b-container>
   </div>
 </template>
@@ -38,5 +36,13 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+.app-container {
+  display: flex;
+}
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column;
+  }
 }
 </style>

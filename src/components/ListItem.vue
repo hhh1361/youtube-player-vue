@@ -44,4 +44,14 @@ export default {
   margin: 30px 0;
   box-shadow: 0px 0px 10px 0px black;
 }
+@media (max-width: 768px) {
+  .listItem {
+    width: 560px;
+    height: 420px;
+    background-size: 100%;
+    margin: auto;
+    box-shadow: 0px 0px 10px 0px black;
+  }
+
+}
 </style>

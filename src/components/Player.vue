@@ -46,7 +46,7 @@ export default {
     z-index: -1;
     content: '';
     background:
-        transparent url('../assets/background/background.jpg') repeat top left;
+        transparent url('../assets/background/background.png') repeat top left;
 }
 .iframe {
     margin: 100px 0px 0px 1px;
