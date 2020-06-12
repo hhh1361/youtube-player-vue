@@ -9,7 +9,23 @@
 <script>
 export default {
   name: 'ListItem',
-  props: ['etag', 'id', 'snippet'],
+  props: {
+    etag: {
+      type: String,
+      default: '',
+      required: true,
+    },
+    id: {
+      type: Object,
+      default: () => {},
+      required: true,
+    },
+    snippet: {
+      type: Object,
+      default: () => {},
+      required: true,
+    },
+  },
   computed: {},
   methods: {
     chooseVideo() {
@@ -25,5 +41,7 @@ export default {
   width: 280px;
   height: 210px;
   background-size: 100%;
+  margin: 30px 0;
+  box-shadow: 0px 0px 10px 0px black;
 }
 </style>

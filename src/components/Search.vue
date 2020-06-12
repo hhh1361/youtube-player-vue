@@ -42,4 +42,7 @@ export default {
 </script>
 
 <style scoped>
+  .search {
+    overflow: hidden;
+  }
 </style>

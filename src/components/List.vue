@@ -32,5 +32,22 @@ export default {
 </script>
 
 <style scoped>
-.list {}
+.list {
+  overflow: auto;
+  height: 600px;
+}
+  ::-webkit-scrollbar {
+  width: 20px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 0, 0, 0.135);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b300003f;
+}
 </style>

@@ -1,8 +1,16 @@
 <template>
   <div id="app">
-    <Player />
-    <Search />
-    <List />
+    <b-container>
+      <b-row>
+        <b-col cols="8">
+          <Player />
+        </b-col>
+        <b-col>
+          <Search />
+          <List />
+        </b-col>
+      </b-row>
+    </b-container>
   </div>
 </template>
 
