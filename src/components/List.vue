@@ -1,5 +1,8 @@
 <template>
-  <div class="list">
+  <div
+    class="list"
+    @scroll="loadMoreVideos"
+  >
     <ListItem
       v-for="item in list"
       :id="item.id"
@@ -14,6 +17,7 @@
 
 <script>
 import ListItem from './ListItem.vue';
+import getVideos from '../api/getVideos';
 
 export default {
   name: 'List',
@@ -24,8 +28,30 @@ export default {
     list() {
       return this.$store.state.list;
     },
+    text() {
+      return this.$store.state.searchInfo.searchText;
+    },
+    token() {
+      return this.$store.state.searchInfo.nextPageToken;
+    },
+    isLoading() {
+      return this.$store.state.isLoading;
+    },
   },
-  methods: {},
+  methods: {
+    async loadMoreVideos(e) {
+      if (!this.isLoading) {
+        const element = e.target;
+        if (element.scrollTop + element.clientHeight >= element.scrollHeight - 500) {
+          this.$store.commit('isLoading', true);
+          const response = await getVideos(this.text, this.token);
+          this.$store.commit('addVideos', response.items);
+          this.$store.commit('updateToken', response.nextPageToken);
+          this.$store.commit('isLoading', false);
+        }
+      }
+    },
+  },
 };
 </script>
 

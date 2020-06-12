@@ -50,13 +50,7 @@
       "no-console": "off",
       "no-new": 0,
       "no-plusplus": 0,
-      "no-param-reassign": 0,
-      "max-len": [
-        "error",
-        {
-          "code": 120
-        }
-      ]
+      "no-param-reassign": 0
     }
   },
   "browserslist": [

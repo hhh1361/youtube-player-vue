@@ -45,7 +45,8 @@ export default {
     async applyDataFromApi(e) {
       this.searchText = e.target.value;
       const videos = await getVideos(e.target.value);
-      this.$store.dispatch('setList', videos.items);
+      this.$store.commit('setList', videos.items);
+      this.$store.commit('setSearchInfo', { searchText: e.target.value, nextPageToken: videos.nextPageToken });
     },
   },
 };
