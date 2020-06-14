@@ -63,6 +63,7 @@ export default {
   box-shadow: 0px 0px 10px 0px black;
 }
 .list-item {
+  width: 310px;
   margin-bottom: 70px;
   background: rgba(0, 0, 0, 0.664);
   border-radius: 30px;

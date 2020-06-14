@@ -43,8 +43,11 @@ export default {
       }
     },
     async applyDataFromApi(e) {
+      this.$store.commit('isLoading', true);
+      this.$store.commit('setList', []);
       this.searchText = e.target.value;
       const videos = await getVideos(e.target.value);
+      this.$store.commit('isLoading', false);
       this.$store.commit('setList', videos.items);
       this.$store.commit('setSearchInfo', { searchText: e.target.value, nextPageToken: videos.nextPageToken });
     },
