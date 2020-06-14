@@ -41,12 +41,5 @@ export default new Vuex.Store({
     },
   },
 
-  actions: {
-    setSearchInfo(context, value) {
-      context.commit('setSearchInfo', value);
-    },
-    chooseVideo(context, value) {
-      context.commit('chooseVideo', value);
-    },
-  },
+  actions: {},
 });

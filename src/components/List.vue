@@ -4,9 +4,9 @@
     @scroll="loadMoreVideos"
   >
     <ListItem
-      v-for="item in list"
+      v-for="(item, index) in list"
       :id="item.id"
-      :key="item.id.videoId"
+      :key="item.etag+index"
       :snippet="item.snippet"
       :etag="item.etag"
     >
