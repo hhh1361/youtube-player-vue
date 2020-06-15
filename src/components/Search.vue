@@ -79,7 +79,7 @@ export default {
     color:rgba(255, 255, 255, 0);
   }
   .search-container {
-    padding: 25px;
+    margin: 0px auto 20px auto;
     display: flex;
     width: 350px;
     justify-content: center;

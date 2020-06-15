@@ -76,6 +76,7 @@ export default {
 }
 @media (max-width: 768px) {
   .list-item {
+    width: 100%;
     margin-bottom: 170px;
   }
   .list-item_preview {

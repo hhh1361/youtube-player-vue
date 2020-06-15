@@ -2,6 +2,7 @@
   <div id="app">
     <b-container class="app-container">
       <div class="player-section">
+        <GoogleOauth />
         <Player />
       </div>
       <div class="search-section">
@@ -16,6 +17,7 @@
 import Player from './components/Player.vue';
 import List from './components/List.vue';
 import Search from './components/Search.vue';
+import GoogleOauth from './components/GoogleOauth.vue';
 
 
 export default {
@@ -24,6 +26,7 @@ export default {
     Player,
     List,
     Search,
+    GoogleOauth,
   },
 };
 </script>
