@@ -1,24 +1,11 @@
-# youtube-player-vue
+# Youtube Player  
+Link:  
+https://hhh1361.github.io/youtube-player-vue/
+---
 
-## Project setup
-```
-npm install
-```
+### Technologies:  
+JS, async JS, Vue, Vuex, Bootstrap, Google API.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+---
+### Description:  
+Application to search and watch videos from youtube.
